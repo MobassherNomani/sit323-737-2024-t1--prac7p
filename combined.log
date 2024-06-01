@@ -1,0 +1,5 @@
+{"level":"error","message":"n1 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"n1 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"n1 is incorrectly defined","service":"calculate-service"}
+{"level":"info","message":"Parameters 10 and 5 received for addition","service":"calculate-service"}
+{"level":"info","message":"Parameters 10 and 5 received for division","service":"calculate-service"}
