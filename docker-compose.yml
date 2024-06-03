@@ -1,19 +1,28 @@
-version: '3'
+version: '3.8'
 services:
-  web:
-    image: skywalker1254/gg
+  app:
     build: .
+    image: skywalker1254/gg
     ports:
-      - "3040:3040"
-    volumes:
-      - .:/app
-      - /app/node_modules
+      - '3043:3040'
     environment:
-      - NODE_ENV=development
-    restart: always
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3040"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
+      - PORT=3043
+    container_name: my-app4
+    networks:
+      - my-net
+
+  app1:
+    build: .
+    image: skywalker1254/gg
+    ports:
+      - '3044:3040'
+    environment:
+      - PORT=3044
+    container_name: my-app3
+    networks:
+      - my-net
+
+
+networks:
+  my-net:
+    driver: bridge

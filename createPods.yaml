@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    tier: frontend1
+spec:
+  containers:
+  - image: skywalker1254/gg
+    name: nodewebapp
+    ports:
+    - containerPort: 3040
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  
